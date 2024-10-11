@@ -21,5 +21,5 @@ function current_uri(){
 }
 
 function urlIs($value){
-    return $_SERVER['REQUEST_URI'] === $value;
+    return current_uri() === $value;
 }
