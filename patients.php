@@ -1,3 +1,3 @@
 <?php 
 
-require('views/patients.view.php');
+require('views/admin/patients.view.php');

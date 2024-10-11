@@ -1,3 +1,3 @@
 <?php 
 
-require('views/calendar.view.php');
+require('views/admin/calendar.view.php');
