@@ -4,11 +4,14 @@
             <div class="sb-sidenav-menu d-flex-column">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Dashboard</div>
-                    <a class="nav-link" href="calendar.php">
+                    <a class="nav-link  <?php echo current_uri() === '/calendar.php' ? 'active' : ''; ?>"" href="
+                        calendar.php">
                         <div class="sb-nav-link-icon"><i class="fa-regular fa-calendar"></i></div>
                         Calendar
                     </a>
-                    <a class="nav-link" href="patients.php">
+                    <a class="nav-link <?php echo current_uri() === '/patients.php' ? 'active' : ''; ?>"
+                        href="patients.php">
+
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-hospital-user"></i></div>
                         Patients
                     </a>

@@ -1,8 +1,10 @@
-<?php 
-    require('partials/head.php');
-    require('partials/nav.php');
-    require('partials/dashboardPanel.php');
+<?php
+    require('views/partials/head.php');
+    require('views/partials/nav.php');
+    require('views/partials/dashboardPanel.php');
 ?>
+
+
 
 <main>
     <div class="container-fluid px-4">
@@ -13,7 +15,6 @@
         <div class="row">
 
         </div>
-
 
 
         <div class="card mb-4">
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calendar.render();
 });
 </script>
-<?php 
-    require('partials/footer.php');
+<?php
+require('views/partials/footer.php');
+
 ?>
