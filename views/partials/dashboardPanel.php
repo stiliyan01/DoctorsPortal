@@ -6,13 +6,13 @@
                     <div class="sb-sidenav-menu-heading">Dashboard</div>
 
                     <!-- Calendar link -->
-                    <a class="nav-link <?=  urlIs('/calendar.php') ? 'active' : ''; ?>" href="calendar.php">
+                    <a class="nav-link <?=  urlIs('/admin/calendar') ? 'active' : ''; ?>" href="/admin/calendar">
                         <div class="sb-nav-link-icon"><i class="fa-regular fa-calendar"></i></div>
                         Calendar
                     </a>
 
                     <!-- Patients link -->
-                    <a class="nav-link <?=  urlIs('/patients.php') ? 'active' : ''; ?>" href="patients.php">
+                    <a class="nav-link <?=  urlIs('/admin/patients') ? 'active' : ''; ?>" href="/admin/patients">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-hospital-user"></i></div>
                         Patients
                     </a>

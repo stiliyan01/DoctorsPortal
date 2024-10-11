@@ -23,3 +23,9 @@ function current_uri(){
 function urlIs($value){
     return current_uri() === $value;
 }
+
+function abort($code = 404) {
+    http_response_code($code);
+    require "views/{$code}.php";
+    die();
+}
