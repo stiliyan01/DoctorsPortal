@@ -12,7 +12,7 @@ $routes = [
 ];
 
 if (array_key_exists($uri, $routes)){
-    echo "Route found: " . $routes[$uri] . "<br>"; // Debugging line
+
     require $routes[$uri];
 } else {
    abort();
