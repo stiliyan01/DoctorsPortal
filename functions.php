@@ -1,5 +1,7 @@
 <?php
 
+require ('config.php');
+
 function dump($value)
 {
     echo '<pre>';
@@ -28,4 +30,8 @@ function abort($code = 404) {
     http_response_code($code);
     require "views/{$code}.php";
     die();
+}
+
+function getDsn($config){
+   return "{$config['db']}:host={$config['host']};port={$config['port']};dbname={$config['dbname']}";
 }
