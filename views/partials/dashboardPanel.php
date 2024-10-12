@@ -23,9 +23,8 @@
                         Patients
                     </a>
                 </div>
-                <div class="sb-sidenav-footer align-items-end">
-                    <div class="small">Logged in as:</div>
-                    tuk moje da slojish username
+                <div class="sb-sidenav-footer align-items-end justify-content-end">
+                    <button class="btn text-danger">Излез</button>
                 </div>
             </div>
         </nav>
