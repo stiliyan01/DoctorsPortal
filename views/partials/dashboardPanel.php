@@ -6,9 +6,9 @@
                     <div class="sb-sidenav-menu-heading">Dashboard</div>
 
                     <!-- Calendar link -->
-                    <a class="nav-link <?=  urlIs('/admin/profile') ? 'active' : ''; ?>" href="/admin/profile">
+                    <a class="nav-link <?=  urlIs('/admin') ? 'active' : ''; ?>" href="/admin">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-user-doctor"></i></i></div>
-                        Profile
+                        Home
                     </a>
 
                     <!-- Calendar link -->
