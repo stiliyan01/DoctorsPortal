@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="Remove debugging echo statement&#10;&#10;Removed an unnecessary debugging echo statement that printed the matched route. This change cleans up the output and avoids exposing internal information.">
+      <change beforePath="$PROJECT_DIR$/controllers/admin/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;stiliyan01&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/stiliyan01/DoctorsPortal.git&quot;,
+    &quot;accountId&quot;: &quot;8ca4b8e1-ff40-4be1-afc5-6c7ca108012f&quot;
+  }
+}</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2nIS2pQYx2AN6Dbknc6mFD1CFSQ" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DoctorsProject" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="" />
+      <created>1728658894393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728658894393</updated>
+      <workItem from="1728658896738" duration="636000" />
+      <workItem from="1728752276541" duration="7379000" />
+    </task>
+    <task id="LOCAL-00001" summary="Refactor admin structure and update routes&#10;&#10;Removed obsolete files and directories for clarity. Relocated key files to more appropriate locations within admin directory, updated route references accordingly, and improved error handling with a new abort function.">
+      <option name="closed" value="true" />
+      <created>1728659158721</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728659158721</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add error page, chart demos, and routing logic&#10;&#10;Added a 404 error page in `views/404.php`. Included chart demo scripts and an image asset. Implemented basic routing in `index.php` to handle admin, calendar, and patients routes.">
+      <option name="closed" value="true" />
+      <created>1728659191739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728659191739</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Remove debugging echo statement&#10;&#10;Removed an unnecessary debugging echo statement that printed the matched route. This change cleans up the output and avoids exposing internal information.">
+      <option name="closed" value="true" />
+      <created>1728659284256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728659284256</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor admin structure and update routes&#10;&#10;Removed obsolete files and directories for clarity. Relocated key files to more appropriate locations within admin directory, updated route references accordingly, and improved error handling with a new abort function." />
+    <MESSAGE value="Add error page, chart demos, and routing logic&#10;&#10;Added a 404 error page in `views/404.php`. Included chart demo scripts and an image asset. Implemented basic routing in `index.php` to handle admin, calendar, and patients routes." />
+    <MESSAGE value="Remove debugging echo statement&#10;&#10;Removed an unnecessary debugging echo statement that printed the matched route. This change cleans up the output and avoids exposing internal information." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove debugging echo statement&#10;&#10;Removed an unnecessary debugging echo statement that printed the matched route. This change cleans up the output and avoids exposing internal information." />
+  </component>
+</project>

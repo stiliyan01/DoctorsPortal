@@ -8,8 +8,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Register - SB Admin</title>
-    <link href="/views/css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body class="bg-primary">
@@ -62,6 +63,35 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="showFieldsCheckbox">
+                                            <label class="form-check-label" for="showFieldsCheckbox">
+                                                Избери ако си лекар!
+                                            </label>
+                                        </div>
+
+                                        <div id="extraFields" style="display: none;">
+                                            <div class="mb-3">
+                                                <select class="form-select" aria-label="Default select example"
+                                                    name="specialty" required>
+                                                    <option selected disabled>Избери специалност!</option>
+                                                    <!-- <option value='edno'>Избери специалност!</option> -->
+                                                    <?php  foreach($doctoralSpecialties as $specialty): ?>
+                                                    <option value="<?= htmlspecialchars($specialty['id']) ?>">
+                                                        <?= htmlspecialchars($specialty['name']) ?>
+                                                    </option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="exampleInput2" class="form-label">Поле 2</label>
+                                                <input type="text" class="form-control" id="exampleInput2"
+                                                    placeholder="Въведи нещо друго">
+                                            </div>
+                                        </div>
                                         <div class="mt-4 mb-0">
                                             <div class="d-grid"><a class="btn btn-primary btn-block"
                                                     href="/views/login.html">Create Account</a></div>
@@ -93,9 +123,10 @@
             </footer>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="/views/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>
