@@ -12,6 +12,7 @@
     <link href="../../css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 
