@@ -9,4 +9,5 @@ return [
     '/register' => 'controllers/register.php',
 
     '/' => 'controllers/homepage.php',
+    '/doctors' => 'controllers/doctors.php',
 ];
