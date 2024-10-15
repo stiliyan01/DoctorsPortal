@@ -7,4 +7,6 @@ return [
 
     '/login' => 'controllers/login.php',
     '/register' => 'controllers/register.php',
+
+    '/' => 'controllers/homepage.php',
 ];
