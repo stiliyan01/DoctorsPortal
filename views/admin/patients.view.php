@@ -6,7 +6,7 @@ require('views/partials/admin/dashboardPanel.php');
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Patients</h1>
+        <h1 class="mt-4">Пациенти</h1>
 
         <div class="card mb-4">
             <div class="card-header">
@@ -51,27 +51,6 @@ require('views/partials/admin/dashboardPanel.php');
         </div>
     </div>
 </main>
-
-<!-- Modal -->
-<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="detailsLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="detailsLabel">Детайли</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script src='/js/admin/patients.js'></script>
 <?php
