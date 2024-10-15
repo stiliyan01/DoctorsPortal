@@ -36,6 +36,8 @@ function getDsn($config){
    return "{$config['db']}:host={$config['host']};port={$config['port']};dbname={$config['dbname']}";
 }
 
-function view($name){
+function view($name, $params = []){
+    extract($params);
+    
     return require "views/{$name}.view.php";
 }
