@@ -35,3 +35,7 @@ function abort($code = 404) {
 function getDsn($config){
    return "{$config['db']}:host={$config['host']};port={$config['port']};dbname={$config['dbname']}";
 }
+
+function view($name){
+    return require "views/{$name}.view.php";
+}

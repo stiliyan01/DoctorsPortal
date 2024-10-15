@@ -1,5 +1,6 @@
 <?php
 
+$config = require 'config.php';
 class Database{
     public  $connection;
 
@@ -26,3 +27,5 @@ class Database{
     }
 
 }
+
+$db = new Database($config['database']);

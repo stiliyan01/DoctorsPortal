@@ -1,9 +1,9 @@
-<?php require('views/partials/head.php'); ?>
+<?php view('partials/head'); ?>
 
 <body id="page-top">
     <?php
-require('views/partials/nav.php');
-require('views/partials/header.php');
+view('partials/nav');
+view('partials/header');
 ?>
 
     <!-- Portfolio Section-->
@@ -165,7 +165,7 @@ require('views/partials/header.php');
     </section>
     <!-- Footer-->
 
-    <?php require('views/partials/footer.php'); ?>
+    <?php view('partials/footer'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 

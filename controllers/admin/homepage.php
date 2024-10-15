@@ -1,3 +1,3 @@
 <?php 
 
-require('views/admin/homepage.view.php');
+view('admin/homepage');

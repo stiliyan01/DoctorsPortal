@@ -1,7 +1,7 @@
 <?php
-require('views/partials/admin/head.php');
-require('views/partials/admin/nav.php');
-require('views/partials/admin/dashboardPanel.php');
+view('partials/admin/head');
+view('partials/admin/nav');
+view('partials/admin/dashboardPanel');
 ?>
 
 <main>
@@ -54,5 +54,5 @@ require('views/partials/admin/dashboardPanel.php');
 
 <script src='/js/admin/patients.js'></script>
 <?php
-    require('views/partials/admin/footer.php');
+    view('partials/admin/footer');
 ?>
