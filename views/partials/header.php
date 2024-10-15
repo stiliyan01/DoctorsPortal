@@ -11,6 +11,6 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+        <p class="masthead-subheading font-weight-light mb-0">ВАШИЯТ ДИГИТАЛЕН ПОМОЩНИК ЗА ЗДРАВЕОПАЗВАНЕ</p>
     </div>
 </header>
