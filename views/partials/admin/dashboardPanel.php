@@ -1,6 +1,6 @@
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
-        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <nav class="sb-sidenav accordion sb-sidenav-dark bg-primary" id="sidenavAccordion">
             <div class="sb-sidenav-menu d-flex-column">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Dashboard</div>
@@ -23,8 +23,8 @@
                         Patients
                     </a>
                 </div>
-                <div class="sb-sidenav-footer align-items-end justify-content-end">
-                    <button class="btn text-danger">Излез</button>
+                <div class="sb-sidenav-footer align-items-end justify-content-end bg-primary">
+                    <button class="btn text-white">Излез</button>
                 </div>
             </div>
         </nav>
