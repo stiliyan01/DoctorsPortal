@@ -41,3 +41,8 @@ function view($name, $params = []){
     
     return require "views/{$name}.view.php";
 }
+
+function redirect($path){
+    header("Location: /{$path}");
+    exit();
+}
