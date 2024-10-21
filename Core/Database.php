@@ -18,14 +18,7 @@ class Database{
         return $this;
     }
 
-    public function all(){
-        return $this->statement->fetchAll();
-    }
-
-    public function find(){
-        return $this->statement->fetch();
-    }
-
+  
 }
 
 $db = new Database($config['database']);
