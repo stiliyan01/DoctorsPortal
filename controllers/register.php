@@ -1,14 +1,17 @@
 <?php
 
-$doctoralSpecialties = [
-    ['id' => 1, 'name' => 'Cardiologist'],
-    ['id' => 2, 'name' => 'Neurologist'],
-    ['id' => 3, 'name' => 'Pediatrician'],
-];
+require('Models/User.php');
+require('Models/Doctor.php');
+require('Models/DoctorSpecialties.php');
+
+$userModel= new User($config['database']);
+$doctorModel= new Doctor($config['database']);
+$doctorSpecialtiesModel= new DoctorSpecialties($config['database']);
+
+$doctoralSpecialties = $doctorSpecialtiesModel->all();
+
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
    dd($_POST);
 }
 
-// $db->query("SELECT * FROM doctors")->all();
-
-view('register');
+view('register',['doctoralSpecialties' => $doctoralSpecialties]);

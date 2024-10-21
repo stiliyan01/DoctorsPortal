@@ -1,8 +1,9 @@
 <?php
 
-// require('functions.php');
-// require('Database.php');
+require('Models/User.php');
 
+$usersModel= new User($config['database']);
+// dd($usersModel->all());
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
    dd($_POST);
@@ -10,4 +11,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-require ('views/login.php');
+view('login');

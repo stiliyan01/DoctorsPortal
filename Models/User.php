@@ -1,6 +1,6 @@
 <?php
 
-require 'Core/Model.php';
+require_once 'Core/Model.php';
 
 class User extends Model
 {

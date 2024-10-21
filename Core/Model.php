@@ -1,7 +1,5 @@
 <?php
 
-require 'Database.php';
-
 class Model extends Database
 {
     protected $table;

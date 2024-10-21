@@ -50,6 +50,12 @@ view('partials/header');
         </div>
     </section>
 
+    <!-- About Section-->
+
+    <!-- Contact Section-->
+
+    <!-- Footer-->
+
     <?php view('partials/footer'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
