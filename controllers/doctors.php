@@ -1,8 +1,8 @@
 <?php
 
-// dd($_SERVER, 'goshe');
+require 'Models/Doctors.php';
 
-dump('goshe');
-ini_set("default_socket_timeout", 100);
-
-header("Location: {$_SERVER['HTTP_REFERER']}");
+	$doctorModel = new Doctor($config['database']);
+	dd($doctorModel->find(1));
+    
+view('doctors');
