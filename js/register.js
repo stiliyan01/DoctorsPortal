@@ -6,18 +6,4 @@ $(document).ready(function () {
       $("#extraFields").slideUp();
     }
   });
-
-  const selectElement = document.getElementById("doctorSpecialties");
-
-  selectElement.addEventListener("mouseover", function (event) {
-    if (event.target.tagName === "OPTION") {
-      event.target.classList.add("hover-green");
-    }
-  });
-
-  selectElement.addEventListener("mouseout", function (event) {
-    if (event.target.tagName === "OPTION") {
-      event.target.classList.remove("hover-green");
-    }
-  });
 });

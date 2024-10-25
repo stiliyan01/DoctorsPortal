@@ -70,8 +70,8 @@
 
                                         <div id="extraFields" style="display: none;">
                                             <div class="mb-3">
-                                                <select class="form-select" id='doctorSpecialties' aria-label="Default select example"
-                                                    name="specialty" required>
+                                                <select class="form-select" id='doctorSpecialties'
+                                                    aria-label="Default select example" name="specialty" required>
                                                     <option selected disabled>Избери специалност!</option>
                                                     <!-- <option value='edno'>Избери специалност!</option> -->
                                                     <?php  foreach($doctoralSpecialties as $specialty): ?>
@@ -84,14 +84,16 @@
 
                                             <div class="mb-3">
                                                 <label for="exampleInput2" class="form-label">Поле 2</label>
-                                                <input type="text" class="form-control" id="exampleInput2"
+                                                <input type="text" class="form-control" name="pole2" id="exampleInput2"
                                                     placeholder="Въведи нещо друго">
                                             </div>
                                         </div>
                                         <div class="mt-4 mb-0">
-                                            <div class="d-grid"><a
-                                                    class="btn btn-primary btn-block bg-primary border-primary"
-                                                    href="register">Създай акаунт</a></div>
+                                            <div class="d-grid">
+                                                <button type="submit"
+                                                    class="btn btn-primary btn-block bg-primary border-primary">Създай
+                                                    акаунт</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
