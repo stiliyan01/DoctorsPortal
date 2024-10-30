@@ -64,6 +64,18 @@
                                         </div>
 
 
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
+                                                value="мъж">
+                                            <label class="form-check-label" for="inlineRadio1">Мъж</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
+                                                value="жена">
+                                            <label class="form-check-label" for="inlineRadio2">Жена</label>
+                                        </div>
+
+
                                         <div class="form-check mb-3">
                                             <input class="form-check-input" type="checkbox" id="showFieldsCheckbox"
                                                 name="is_doctor">
