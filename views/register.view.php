@@ -29,25 +29,28 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputFirstName" type="text" />
+                                                    <input class="form-control" id="inputFirstName" type="text"
+                                                        name="first_name" />
                                                     <label for="inputFirstName">Име</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" id="inputLastName" type="text" />
+                                                    <input class="form-control" id="inputLastName" type="text"
+                                                        name="last_name" />
                                                     <label for="inputLastName">Фамилия</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" type="email" />
+                                            <input class="form-control" id="inputEmail" type="email" name="email" />
                                             <label for="inputEmail">Емайл</label>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="inputPassword" type="password" />
+                                                    <input class="form-control" id="inputPassword" type="password"
+                                                        name="password" />
                                                     <label for="inputPassword">Парола</label>
                                                 </div>
                                             </div>
@@ -62,7 +65,8 @@
 
 
                                         <div class="form-check mb-3">
-                                            <input class="form-check-input" type="checkbox" id="showFieldsCheckbox">
+                                            <input class="form-check-input" type="checkbox" id="showFieldsCheckbox"
+                                                name="is_doctor">
                                             <label class="form-check-label" for="showFieldsCheckbox">
                                                 Избери ако си лекар!
                                             </label>
@@ -83,9 +87,15 @@
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="exampleInput2" class="form-label">Поле 2</label>
-                                                <input type="text" class="form-control" name="pole2" id="exampleInput2"
-                                                    placeholder="Въведи нещо друго">
+                                                <select class="form-select" id='city'
+                                                    aria-label="Default select example" name="city" required>
+                                                    <option selected disabled>Избери град!</option>
+                                                    <?php  foreach($cities as $city): ?>
+                                                    <option value="<?= htmlspecialchars($city['id']) ?>">
+                                                        <?= htmlspecialchars($city['name']) ?>
+                                                    </option>
+                                                    <?php endforeach; ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="mt-4 mb-0">
