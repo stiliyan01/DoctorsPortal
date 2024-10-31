@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Register - SB Admin</title>
+    <title>Register</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -85,6 +85,14 @@
                                         </div>
 
                                         <div id="extraFields" style="display: none;">
+                                            <div class="row-md-10 mb-3">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="title" type="text"
+                                                           name="title" />
+                                                    <label for="title">Титла</label>
+                                                </div>
+                                            </div>
+
                                             <div class="mb-3">
                                                 <select class="form-select" id='doctorSpecialties'
                                                     aria-label="Default select example" name="specialty" required>
