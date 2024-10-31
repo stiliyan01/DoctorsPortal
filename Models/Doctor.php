@@ -11,6 +11,6 @@ class Doctor extends Model
     {
         $sql = "SELECT * FROM {$this->table} WHERE email = :email AND password = :password";
         $this->query($sql, ['email' => $data['email'], 'password' => $data['password']]);
-        return $this->statement->fetch() !== false;
+        return $this->statement->fetch();
     }
 }

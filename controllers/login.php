@@ -3,13 +3,30 @@
 require('Models/User.php');
 require('Models/Doctor.php');
 
-$usersModel= new User($config['database']);
+$userModel= new User($config['database']);
 $doctorModel = new Doctor($config['database']);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    dd($doctorModel->login($_POST));
+    $doctor = $doctorModel->login($_POST);
+    $user = $userModel->login($_POST);
+
+    $logged = [
+        'is_doctor' => $doctor ? true : false,
+        'is_user' => $user ? true : false,
+        'user' => $doctor ? $doctor : ($user ? $user : null)
+    ];
+
+    if(($doctor || $user) === false ){
+       return view('login');
+    }
+
+    $_SESSION['logged'] = $logged;
+
+    if($doctor){
+        return redirect('admin');
+    }else{
+        return redirect('');
+    }
 }
-
-
 
 view('login');
