@@ -1,12 +1,13 @@
 <?php
 
 require('Models/User.php');
+require('Models/Doctor.php');
 
 $usersModel= new User($config['database']);
-// dd($usersModel->all());
+$doctorModel = new Doctor($config['database']);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-   dd($_POST);
+    dd($doctorModel->login($_POST));
 }
 
 
