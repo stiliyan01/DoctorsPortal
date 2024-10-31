@@ -43,6 +43,6 @@ function view($name, $params = []){
 }
 
 function redirect($path){
-    header("Location: /{$path}");
+    header("Location: {$_SERVER['HTTP_ORIGIN']}/{$path}");
     exit();
 }
