@@ -1,8 +1,8 @@
 <?php
 
-require 'Models/Doctors.php';
+require './Models/Doctor.php';
 
-	$doctorModel = new Doctor();
-	dd($doctorModel->find(1));
+$doctorModel = new Doctor();
+
     
 view('doctors');
