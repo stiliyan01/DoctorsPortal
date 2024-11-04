@@ -3,8 +3,8 @@
 require('Models/User.php');
 require('Models/Doctor.php');
 
-$userModel= new User($config['database']);
-$doctorModel = new Doctor($config['database']);
+$userModel= new User();
+$doctorModel = new Doctor();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $doctor = $doctorModel->login($_POST);

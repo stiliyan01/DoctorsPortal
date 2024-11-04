@@ -5,15 +5,16 @@ require('Models/Doctor.php');
 require('Models/DoctorSpecialties.php');
 require('Models/Cities.php');
 
-$userModel = new User($config['database']);
-$doctorModel = new Doctor($config['database']);
-$doctorSpecialtiesModel = new DoctorSpecialties($config['database']);
-$citiesModel = new Cities($config['database']);
+$userModel = new User();
+$doctorModel = new Doctor();
+$doctorSpecialtiesModel = new DoctorSpecialties();
+$citiesModel = new Cities();
 
 $doctoralSpecialties = $doctorSpecialtiesModel->all();
 $cities = $citiesModel->all();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    dd($_POST);
     $data = [
         'first_name' => $_POST['first_name'],
         'last_name' => $_POST['last_name'],

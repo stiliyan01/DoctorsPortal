@@ -25,7 +25,7 @@
                                     <h3 class="text-center font-weight-light my-4">Създай акунт</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="/register">
+                                    <form method="POST" action="/register-account">
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
@@ -87,8 +87,7 @@
                                         <div id="extraFields" style="display: none;">
                                             <div class="row-md-10 mb-3">
                                                 <div class="form-floating">
-                                                    <input class="form-control" id="title" type="text"
-                                                           name="title" />
+                                                    <input class="form-control" id="title" type="text" name="title" />
                                                     <label for="title">Титла</label>
                                                 </div>
                                             </div>
