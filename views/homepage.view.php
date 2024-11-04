@@ -26,19 +26,25 @@ view('partials/header');
                         <div class="form-group mb-2">
                             <select class="form-control" id="exampleFormControlSelect1" name='doctorSpecialty'>
                                 <option>Избери Специалност</option>
-                                <option value='1'>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+
+                                <?php foreach ($doctorsSpecialties as $specialty) : ?>
+                                    <option value='<?= $specialty['id'] ?>'><?= $specialty['name'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <select class="form-control" id="exampleFormControlSelect2" name='city'>
+                                <option>Избери град</option>
+
+                                <?php foreach ($cities as $city) : ?>
+                                    <option value='<?= $city['id'] ?>'><?= $city['name'] ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control mb-2" name='city' placeholder="Избери град">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control mb-2" name='name' placeholder="Име на лекар">
+                            <input type="text" class="form-control mb-2" name='doctor_name' placeholder="Име на лекар">
                         </div>
 
                         <div class='d-flex justify-content-center'>

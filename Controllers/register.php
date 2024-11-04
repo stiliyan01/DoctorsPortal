@@ -2,13 +2,13 @@
 
 require('Models/User.php');
 require('Models/Doctor.php');
-require('Models/DoctorSpecialties.php');
-require('Models/Cities.php');
+require('Models/DoctorSpecialty.php');
+require('Models/City.php');
 
 $userModel = new User();
 $doctorModel = new Doctor();
-$doctorSpecialtiesModel = new DoctorSpecialties();
-$citiesModel = new Cities();
+$doctorSpecialtiesModel = new DoctorSpecialty();
+$citiesModel = new City();
 
 $doctoralSpecialties = $doctorSpecialtiesModel->all();
 $cities = $citiesModel->all();

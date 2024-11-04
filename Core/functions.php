@@ -38,7 +38,6 @@ function getDsn($config){
 
 function view($name, $params = []){
     extract($params);
-    
     return require "views/{$name}.view.php";
 }
 

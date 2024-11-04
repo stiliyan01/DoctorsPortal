@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="Remove extra blank lines from admin homepage view&#10;&#10;Two unnecessary blank lines were removed from the admin homepage view file. This change enhances the readability and cleanliness of the codebase.">
-      <change afterPath="$PROJECT_DIR$/Controllers/logout.php" afterDir="false" />
+    <list default="true" id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="Implement user session management and logout functionality&#10;&#10;Added user-specific session handling in login, consistent session key updates, and logout processing. Modified navigation to conditionally display login, register, and logout options based on user session state. Simplified route access with middleware checks for guests.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/nav.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/nav.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/homepage.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1729008134912" duration="2971000" />
       <workItem from="1730367198724" duration="3370000" />
       <workItem from="1730733164955" duration="226000" />
-      <workItem from="1730733496455" duration="2737000" />
+      <workItem from="1730733496455" duration="3718000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor admin structure and update routes&#10;&#10;Removed obsolete files and directories for clarity. Relocated key files to more appropriate locations within admin directory, updated route references accordingly, and improved error handling with a new abort function.">
       <option name="closed" value="true" />
@@ -207,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730734858821</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implement user session management and logout functionality&#10;&#10;Added user-specific session handling in login, consistent session key updates, and logout processing. Modified navigation to conditionally display login, register, and logout options based on user session state. Simplified route access with middleware checks for guests.">
+      <option name="closed" value="true" />
+      <created>1730736287152</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730736287152</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +236,7 @@
     <MESSAGE value="Add middleware classes and integrate into routes&#10;&#10;Introduced Auth and Guest middleware classes to manage session-based access control. Integrated these middleware checks into the login and register routes, replacing placeholder values with appropriate middleware keys. This improves route security and session management." />
     <MESSAGE value="Add middleware support to router&#10;&#10;Integrate Middleware class in router. Modify &quot;only&quot; method to return $this and ensure the middleware is resolved before requiring the controller file in routeTo method." />
     <MESSAGE value="Remove extra blank lines from admin homepage view&#10;&#10;Two unnecessary blank lines were removed from the admin homepage view file. This change enhances the readability and cleanliness of the codebase." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove extra blank lines from admin homepage view&#10;&#10;Two unnecessary blank lines were removed from the admin homepage view file. This change enhances the readability and cleanliness of the codebase." />
+    <MESSAGE value="Implement user session management and logout functionality&#10;&#10;Added user-specific session handling in login, consistent session key updates, and logout processing. Modified navigation to conditionally display login, register, and logout options based on user session state. Simplified route access with middleware checks for guests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement user session management and logout functionality&#10;&#10;Added user-specific session handling in login, consistent session key updates, and logout processing. Modified navigation to conditionally display login, register, and logout options based on user session state. Simplified route access with middleware checks for guests." />
   </component>
 </project>

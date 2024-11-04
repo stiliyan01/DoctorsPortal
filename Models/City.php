@@ -2,7 +2,7 @@
 
 require_once 'Core/Model.php';
 
-class Cities extends Model
+class City extends Model
 {
     protected $table = 'cities';
     protected $primaryKey = 'id';
