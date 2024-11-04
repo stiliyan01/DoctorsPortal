@@ -14,7 +14,6 @@ $doctoralSpecialties = $doctorSpecialtiesModel->all();
 $cities = $citiesModel->all();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    dd($_POST);
     $data = [
         'first_name' => $_POST['first_name'],
         'last_name' => $_POST['last_name'],

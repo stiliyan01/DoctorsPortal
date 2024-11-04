@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
        return view('login');
     }
 
-    $_SESSION['logged'] = $logged;
+    $_SESSION['user'] = $logged;
 
     if($doctor){
         return redirect('admin');
