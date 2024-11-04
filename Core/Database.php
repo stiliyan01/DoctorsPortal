@@ -16,7 +16,6 @@ class Database {
         );
     }
 
-    // Singleton method to get the single instance of Database
     public static function getInstance($config) {
         if (self::$instance === null) {
             self::$instance = new Database($config['database']);
