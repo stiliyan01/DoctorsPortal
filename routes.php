@@ -5,6 +5,10 @@ $router->get('/admin', 'Controllers/admin/homepage.php')->only('admin_doctor');
 $router->get('/admin/calendar', 'Controllers/admin/calendar.php')->only('admin_doctor');
 $router->get('/admin/patients', 'Controllers/admin/patients.php')->only('admin_doctor');
 
+
+//admin-user
+$router->get('/user-profile', 'Controllers/profile.php')->only('user');
+
 //login
 $router->get('/login', 'Controllers/login.php')->only('guest');
 $router->post('/login-account', 'Controllers/login.php');

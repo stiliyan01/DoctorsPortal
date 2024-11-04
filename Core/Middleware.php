@@ -1,13 +1,13 @@
 <?php
 
-require_once './Middleware/Auth.php';
+require_once './Middleware/UserMiddleware.php';
 require_once './Middleware/Guest.php';
 require_once './Middleware/AdminDoctor.php';
 
 
 class Middleware{
     const MAP = [
-        'auth' => Auth::class,
+        'user' => UserMiddleware::class,
         'guest' => Guest::class,
         'admin_doctor' => AdminDoctor::class,
     ];

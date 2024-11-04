@@ -2,10 +2,10 @@
 
 require_once './Core/Middleware.php';
 
-class Auth extends Middleware
+class UserMiddleware extends Middleware
 {
     public function handle(){
-        if (! $_SESSION['user'] ?? false) {
+        if ($_SESSION['user']['is_user'] === false) {
             header('location: /');
             exit();
         }
