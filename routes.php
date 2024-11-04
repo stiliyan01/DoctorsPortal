@@ -1,13 +1,20 @@
 <?php 
 
-return [
-    '/admin' => 'controllers/admin/homepage.php',
-    '/admin/calendar' => 'controllers/admin/calendar.php',
-    '/admin/patients' => 'controllers/admin/patients.php',
+//admin-doctors
+$router->get('/admin', 'controllers/admin/homepage.php');
+$router->get('/admin/calendar', 'controllers/admin/calendar.php');  
+$router->get('/admin/patients', 'controllers/admin/patients.php');  
 
-    '/login' => 'controllers/login.php',
-    '/register' => 'controllers/register.php',
+//login
+$router->get('/login', 'controllers/login.php');
+$router->post('/login-account', 'controllers/login.php');
 
-    '/' => 'controllers/homepage.php',
-    '/doctors' => 'controllers/doctors.php',
-];
+
+//register
+$router->get('/register', 'controllers/register.php');
+$router->post('/register-account', 'controllers/register.php');
+
+
+//user
+$router->get('/', 'controllers/homepage.php');
+$router->get('/doctors', 'controllers/doctors.php');
