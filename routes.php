@@ -1,9 +1,9 @@
 <?php 
 
 //admin-doctors
-$router->get('/admin', 'Controllers/admin/homepage.view.php');
-$router->get('/admin/calendar', 'Controllers/admin/calendar.php');
-$router->get('/admin/patients', 'Controllers/admin/patients.php');
+$router->get('/admin', 'Controllers/admin/homepage.php')->only('admin_doctor');
+$router->get('/admin/calendar', 'Controllers/admin/calendar.php')->only('admin_doctor');
+$router->get('/admin/patients', 'Controllers/admin/patients.php')->only('admin_doctor');
 
 //login
 $router->get('/login', 'Controllers/login.php')->only('guest');
