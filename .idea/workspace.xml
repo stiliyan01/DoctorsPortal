@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="Add user login and session management logic&#10;&#10;Enhanced the login controller by adding user login support alongside doctor login. Included logic to check and store login status in the session, redirecting users based on their roles. Updated the Doctor model to return user data instead of a boolean for successful login.">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/admin/calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/admin/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/patients.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/admin/patients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/doctors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +87,7 @@
       <workItem from="1728752276541" duration="7379000" />
       <workItem from="1729008134912" duration="2971000" />
       <workItem from="1730367198724" duration="3370000" />
+      <workItem from="1730733164955" duration="226000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor admin structure and update routes&#10;&#10;Removed obsolete files and directories for clarity. Relocated key files to more appropriate locations within admin directory, updated route references accordingly, and improved error handling with a new abort function.">
       <option name="closed" value="true" />

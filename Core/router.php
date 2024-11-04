@@ -10,17 +10,24 @@ class Router {
             'method' => $method,
             'middleware' => $middleware
         ];
+
+        return $this;
     }
     public function get($url, $controller){
-        $this->addToRoutes($url, $controller, 'GET');
+        return $this->addToRoutes($url, $controller, 'GET');
     }
 
     public function post($url, $controller){
-        $this->addToRoutes($url, $controller, 'POST');
+        return $this->addToRoutes($url, $controller, 'POST');
     }
     public function delete($url, $controller){
-        $this->addToRoutes($url, $controller, 'DELETE');
+       return $this->addToRoutes($url, $controller, 'DELETE');
     } 
+
+    public function only($middleware){
+        $this->routes[array_key_last($this->routes)]['middleware'] = $middleware;
+        dd($this);
+    }
 
     public function routeTo($url, $method){
         foreach ($this->routes as $route) {

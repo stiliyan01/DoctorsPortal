@@ -1,20 +1,20 @@
 <?php 
 
 //admin-doctors
-$router->get('/admin', 'controllers/admin/homepage.php');
-$router->get('/admin/calendar', 'controllers/admin/calendar.php');  
-$router->get('/admin/patients', 'controllers/admin/patients.php');  
+$router->get('/admin', 'Controllers/admin/homepage.php');
+$router->get('/admin/calendar', 'Controllers/admin/calendar.php');
+$router->get('/admin/patients', 'Controllers/admin/patients.php');
 
 //login
-$router->get('/login', 'controllers/login.php');
-$router->post('/login-account', 'controllers/login.php');
+$router->get('/login', 'Controllers/login.php')->only('pesho');
+$router->post('/login-account', 'Controllers/login.php');
 
 
 //register
-$router->get('/register', 'controllers/register.php');
-$router->post('/register-account', 'controllers/register.php');
+$router->get('/register', 'Controllers/register.php')->only('goshko');
+$router->post('/register-account', 'Controllers/register.php');
 
 
 //user
-$router->get('/', 'controllers/homepage.php');
-$router->get('/doctors', 'controllers/doctors.php');
+$router->get('/', 'Controllers/homepage.php');
+$router->get('/doctors', 'Controllers/doctors.php');
