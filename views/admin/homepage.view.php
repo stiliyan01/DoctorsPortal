@@ -7,7 +7,7 @@
 <main>
     <div class="container-fluid px-4">
         <div class=''>
-            <h1 class="mt-4">Home</h1>
+            <h1 class="mt-4">Профил</h1>
 
         </div>
 
