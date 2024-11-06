@@ -24,7 +24,11 @@
                     </a>
                 </div>
                 <div class="sb-sidenav-footer align-items-end justify-content-end bg-primary">
-                    <button class="btn text-white">Излез</button>
+                    <form method="POST" action="/logout">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn text-danger">Излез</button>
+                    </form>
+
                 </div>
             </div>
         </nav>
