@@ -2,6 +2,7 @@
 view('partials/admin/head');
 view('partials/admin/nav');
 view('partials/admin/dashboardPanel');
+
 ?>
 
 <main>
@@ -18,33 +19,31 @@ view('partials/admin/dashboardPanel');
                     <thead>
                         <tr>
                             <th>Име</th>
+                            <th>Фамилия</th>
                             <th>Емайл</th>
-                            <th>Телефонен номер</th>
-                            <th>Дата на раждане</th>
-                            <th>Адрес</th>
                             <th>Детайли</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Име</th>
+                            <th>Фамилия</th>
                             <th>Емайл</th>
-                            <th>Телефонен номер</th>
-                            <th>Дата на раждане</th>
-                            <th>Адрес</th>
                             <th>Детайли</th>
                         </tr>
                     </tfoot>
                     <tbody>
+                        <?php foreach($patients as $patient): ?>
                         <tr>
-                            <td>Гошо</td>
-                            <td>Емайл 123 </td>
-                            <td>80572</td>
-                            <td>19.08.2022</td>
-                            <td>варна</td>
-                            <td><button class='btn bg-primary details' data-toggle="modal"
-                                    data-target="#details">Детайли</button></td>
+                            <td><?= $patient['first_name'] ?></td>
+                            <td><?= $patient['last_name'] ?></td>
+                            <td><?= $patient['email'] ?></td>
+                            <td>
+                                <a href="/admin/patient-details?id=<?= $patient['id'] ?>"
+                                    class='btn bg-primary details'>Детайли</a>
+                            </td>
                         </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

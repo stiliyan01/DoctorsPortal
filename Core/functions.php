@@ -45,3 +45,13 @@ function redirect($path){
     header("Location: {$_SERVER['HTTP_ORIGIN']}/{$path}");
     exit();
 }
+
+function requestParams(){
+    $result = [];
+
+    foreach($_REQUEST as $key => $value){
+        $result[$key] = htmlspecialchars($value);
+    }
+    
+    return $result;
+}

@@ -12,4 +12,10 @@ class Doctor extends Model
         $this->query($sql, ['email' => $data['email'], 'password' => $data['password']]);
         return $this->db->statement->fetch();
     }
+
+    public function patients($doctor_id){
+        $sql = "SELECT * FROM patients WHERE doctor_id = :doctor_id";
+        $this->query($sql, ['doctor_id' => $doctor_id]);
+        return $this->db->statement->fetchAll();
+    }
 }
