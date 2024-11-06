@@ -5,4 +5,4 @@ require './Models/Doctor.php';
 $doctorModel = new Doctor();
 
     
-view('doctors');
+view('doctors-results');

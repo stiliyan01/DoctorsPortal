@@ -33,4 +33,4 @@ $router->delete('/logout', 'Controllers/logout.php');
 
 //user
 $router->get('/', 'Controllers/homepage.php');
-$router->get('/doctors', 'Controllers/doctor.php');
+$router->get('/doctors', 'Controllers/doctor-results.php');
