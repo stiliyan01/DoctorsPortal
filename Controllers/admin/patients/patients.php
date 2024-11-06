@@ -11,4 +11,4 @@ foreach($patientsAll as $patient){
     $patentsMappedToUsers[] = (new User())->find($patient['user_id']);
 }
 
-view('admin/patients', ['patients' => $patentsMappedToUsers]);
+view('admin/patients/patients', ['patients' => $patentsMappedToUsers]);

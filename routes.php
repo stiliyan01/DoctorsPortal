@@ -3,15 +3,15 @@
 //admin-doctors
 $router->get('/admin', 'Controllers/admin/homepage.php')->only('admin_doctor');
 $router->get('/admin/calendar', 'Controllers/admin/calendar.php')->only('admin_doctor');
-$router->get('/admin/patients', 'Controllers/admin/patients.php')->only('admin_doctor');
-$router->get('/admin/patient-details', 'Controllers/admin/patient-details.php')->only('admin_doctor');
+$router->get('/admin/patients', 'Controllers/admin/patients/patients.php')->only('admin_doctor');
+$router->get('/admin/patient-details', 'Controllers/admin/patients/patient-details.php')->only('admin_doctor');
 
 $router->put('/admin/update-doctor', 'Controllers/admin/update-doctor.php')->only('admin_doctor');
 
 
 //admin-user
-$router->get('/user-profile', 'Controllers/user-profile.php')->only('user');
-$router->put('/update-user-profile', 'Controllers/update-user-profile.php')->only('user');
+$router->get('/user-profile', 'Controllers/user/user-profile.php')->only('user');
+$router->put('/update-user-profile', 'Controllers/user/update-user-profile.php')->only('user');
 
 //login
 $router->get('/login', 'Controllers/login.php')->only('guest');
