@@ -23,6 +23,10 @@ class Router {
     public function delete($url, $controller){
        return $this->addToRoutes($url, $controller, 'DELETE');
     }
+    public function put($url, $controller){
+        return $this->addToRoutes($url, $controller, 'PUT');
+    }
+
     public function only($middleware){
         $this->routes[array_key_last($this->routes)]['middleware'] = $middleware;
         return $this;
