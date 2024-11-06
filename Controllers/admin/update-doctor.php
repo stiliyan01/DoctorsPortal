@@ -9,6 +9,7 @@ $doctor = new Doctor();
 $doctor = $doctor->find($doctor_id);
 
 $dataForUpdate = [
+    'title' => $_POST['title'],
     'first_name' => $_POST['first_name'],
     'last_name' => $_POST['last_name'],
     'email' => $_POST['email'],
