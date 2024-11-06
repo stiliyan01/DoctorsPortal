@@ -5,7 +5,7 @@ require('Models/Doctor.php');
 require('Models/DoctorSpecialty.php');
 require('Models/City.php');
 
-$userModel = new UserMiddleware();
+$userModel = new User();
 $doctorModel = new Doctor();
 $doctorSpecialtiesModel = new DoctorSpecialty();
 $citiesModel = new City();
