@@ -47,12 +47,24 @@
 
             <div class="mb-3">
                 <label for="options" class="form-label">Специалност</label>
-                <select class="form-select" name="options" id="options" required>
+                <select class="form-select" name="speciality_id" id="options" required>
                     <option selected disabled>Изберете специалност</option>
                     <?php foreach ($specialties as $specialty): ?>
                     <option value="<?= $specialty['id'] ?>"
                         <?= $specialty['id'] == $doctor['speciality_id'] ? 'selected' : '' ?>>
                         <?= $specialty['name'] ?>
+                    </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="options" class="form-label">Град</label>
+                <select class="form-select" name="city_id" id="options" required>
+                    <option selected disabled>Изберете град</option>
+                    <?php foreach ($cities as $city): ?>
+                    <option value="<?= $city['id'] ?>" <?= $city['id'] == $doctor['city_id'] ? 'selected' : '' ?>>
+                        <?= $city['name'] ?>
                     </option>
                     <?php endforeach; ?>
                 </select>

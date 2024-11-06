@@ -25,20 +25,20 @@ view('partials/header');
                     <form action='/doctors'>
                         <div class="form-group mb-2">
                             <select class="form-control" id="exampleFormControlSelect1" name='doctorSpecialty'>
-                                <option>Избери Специалност</option>
+                                <option value="">Избери Специалност</option>
 
                                 <?php foreach ($doctorsSpecialties as $specialty) : ?>
-                                    <option value='<?= $specialty['id'] ?>'><?= $specialty['name'] ?></option>
+                                <option value='<?= $specialty['id'] ?>'><?= $specialty['name'] ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
 
                         <div class="form-group mb-2">
                             <select class="form-control" id="exampleFormControlSelect2" name='city'>
-                                <option>Избери град</option>
+                                <option value="">Избери град</option>
 
                                 <?php foreach ($cities as $city) : ?>
-                                    <option value='<?= $city['id'] ?>'><?= $city['name'] ?></option>
+                                <option value='<?= $city['id'] ?>'><?= $city['name'] ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
