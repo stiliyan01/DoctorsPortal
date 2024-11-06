@@ -44,6 +44,20 @@ view('partials/admin/dashboardPanel');
             <br>
             <br>
 
+            <label class="form-check-label mb-3" for="inlineRadio1">Донор ли е?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="is_donor" id="inlineRadio2" value="1"
+                    <?= $user['is_donor'] == '1' ? 'checked' : '' ?>>
+                <label class="form-check-label" for="inlineRadio2">ДА</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="is_donor" id="inlineRadio1" value="0"
+                    <?= $user['is_donor'] == '0' ? 'checked' : '' ?>>
+                <label class="form-check-label" for="inlineRadio1">НЕ</label>
+            </div>
+            <br>
+            <br>
+
             <div class="form-group">
                 <label class='mb-2' for="exampleFormControlTextarea3">Досие</label>
                 <textarea class="form-control mb-3" name='file' id="exampleFormControlTextarea3"
@@ -52,7 +66,6 @@ view('partials/admin/dashboardPanel');
 
             <button type="submit" class="btn bg-primary text-white">Запази</button>
         </form>
-
     </div>
 </main>
 

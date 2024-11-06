@@ -5,6 +5,8 @@ $router->get('/admin', 'Controllers/admin/homepage.php')->only('admin_doctor');
 $router->get('/admin/calendar', 'Controllers/admin/calendar.php')->only('admin_doctor');
 $router->get('/admin/patients', 'Controllers/admin/patients/patients.php')->only('admin_doctor');
 $router->get('/admin/patient-details', 'Controllers/admin/patients/patient-details.php')->only('admin_doctor');
+$router->get('/admin/donors', 'Controllers/admin/donors.php')->only('admin_doctor');
+
 $router->put('/admin/update-patient-details', 'Controllers/admin/patients/update-patient-details.php')->only('admin_doctor');
 
 

@@ -13,4 +13,10 @@ class User extends Model
         $this->query($sql, ['email' => $data['email'], 'password' => $data['password']]);
         return $this->db->statement->fetch();
     }
+
+    public function donors(){
+        $sql = "SELECT * FROM {$this->table} WHERE is_donor = 1";
+        $this->query($sql);
+        return $this->db->statement->fetchAll();
+    }
 }

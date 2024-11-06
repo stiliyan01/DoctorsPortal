@@ -22,6 +22,12 @@
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-hospital-user"></i></div>
                         Пациенти
                     </a>
+
+                    <!-- Patients link -->
+                    <a class="nav-link <?=  urlIs('/admin/donors') ? 'active' : ''; ?>" href="/admin/donors">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-lungs"></i></div>
+                        Донори
+                    </a>
                 </div>
                 <div class="sb-sidenav-footer align-items-end justify-content-end bg-primary">
                     <form method="POST" action="/logout">
