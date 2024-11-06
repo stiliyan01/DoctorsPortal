@@ -46,7 +46,7 @@
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Запази</button>
+            <button type="submit" class="btn bg-primary text-white">Запази</button>
         </form>
 
     </div>
