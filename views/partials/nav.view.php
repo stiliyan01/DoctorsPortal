@@ -9,8 +9,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#saveATime">ЗАПАЗИ
-                        ЧАС</a></li>
+
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded"
+                        href="<?php echo (current_uri() === strtoupper('/')) ? '#saveATime' : '/#saveATime'; ?>">
+                        ЗАПАЗИ ЧАС
+                    </a>
+                </li>
+
                 <?php if (!isset($_SESSION['user'])) : ?>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href='/login'>Влез</a>
                 </li>
@@ -18,10 +24,11 @@
                         href='/register'>Регистрирай се</a></li>
                 <?php endif; ?>
 
-                <?php if (isset($_SESSION['user']) && (current_uri() !== strtoupper('/user-profile') )) : ?>
+
+                <?php if (isset($_SESSION['user']) && (current_uri() !== '/user-profile')) : ?>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                        href='user-profile'>Профил</a></li>
-                <?php endif;  ?>
+                        href='/user-profile'>Профил</a></li>
+                <?php endif; ?>
 
                 <?php if (isset($_SESSION['user']) && urlIs('/user-profile')) : ?>
                 <li class="nav-item mx-0 mx-lg-1">
