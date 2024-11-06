@@ -10,6 +10,7 @@ $router->put('/admin/update-doctor', 'Controllers/admin/update-doctor.php')->onl
 
 //admin-user
 $router->get('/user-profile', 'Controllers/user-profile.php')->only('user');
+$router->put('/update-user-profile', 'Controllers/update-user-profile.php')->only('user');
 
 //login
 $router->get('/login', 'Controllers/login.php')->only('guest');

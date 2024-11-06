@@ -13,7 +13,7 @@ $dataForUpdate = [
     'last_name' => $_POST['last_name'],
     'email' => $_POST['email'],
     'password' => $_POST['password'],
-    'speciality_id' => $_POST['options']
+    'gender' => $_POST['gender']
 ];
 
 (new Doctor())->update($doctor_id, $dataForUpdate);

@@ -1,9 +1,7 @@
 <?php
 
+require 'Models/User.php';
 
-dd("here");
-// require 'Models/User.php';
+$user = (new User())->find($_SESSION['user']['user']['id']);  
 
-// $user = (new User())->find($_SESSION['user']);  
-
-// dd($user);
+view('user-profile', ['user' => $user]);
