@@ -2,7 +2,6 @@
 
 require './Models/Doctor.php';
 
-$doctorModel = new Doctor();
-
+$doctors = (new Doctor())->searchDoctors(requestParams());  
     
-view('doctors-results');
+view('doctors-results', ['doctors' => $doctors]);
