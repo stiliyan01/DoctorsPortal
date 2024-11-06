@@ -3,7 +3,7 @@
 require('Models/User.php');
 require('Models/Doctor.php');
 
-$userModel= new UserMiddleware();
+$userModel= new User();
 $doctorModel = new Doctor();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
