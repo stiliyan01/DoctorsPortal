@@ -11,14 +11,23 @@
 
         </div>
 
-        <form method="POST">
+        <form method="POST" action="/admin/update-doctor">
+            <input type="hidden" name="_method" value="PUT">
+            <input type="hidden" name="id" value="<?= $doctor['id'] ?>">
             <div class="mb-3">
-                <label for="name" class="form-label">Име</label>
-                <input type="text" name="name" class="form-control" id="name" required>
+                <label for="first_name" class="form-label">Име</label>
+                <input type="text" name="first_name" class="form-control" id="first_name"
+                    value='<?= $doctor['first_name'] ?>' required>
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Фамилия</label>
+                <input type="text" name="last_name" class="form-control" id="last_name"
+                    value='<?= $doctor['last_name'] ?>' required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Имейл</label>
-                <input type="email" name="email" class="form-control" id="email" required>
+                <input type="email" name="email" class="form-control" id="email" value='<?= $doctor['email'] ?>'
+                    required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Парола</label>
@@ -28,10 +37,12 @@
                 <label for="options" class="form-label">Специалност</label>
                 <select class="form-select" name="options" id="options" required>
                     <option selected disabled>Изберете специалност</option>
-                    <option value="option1">Опция 1</option>
-                    <option value="option2">Опция 2</option>
-                    <option value="option3">Опция 3</option>
-                    <!-- Можеш да добавиш още опции тук -->
+                    <?php foreach ($specialties as $specialty): ?>
+                    <option value="<?= $specialty['id'] ?>"
+                        <?= $specialty['id'] == $doctor['speciality_id'] ? 'selected' : '' ?>>
+                        <?= $specialty['name'] ?>
+                    </option>
+                    <?php endforeach; ?>
                 </select>
             </div>
 
