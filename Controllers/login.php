@@ -21,11 +21,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $_SESSION['user'] = $logged;
-
+    
     if($doctor){
-        return redirect('admin');
+        return previousUrl();
     }else{
-        return redirect('');
+        return previousUrl();   
     }
 }
 

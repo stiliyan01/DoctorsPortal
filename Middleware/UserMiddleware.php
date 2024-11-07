@@ -5,9 +5,12 @@ require_once './Core/Middleware.php';
 class UserMiddleware extends Middleware
 {
     public function handle(){
-        if ($_SESSION['user']['is_user'] === false) {
-            header('location: /');
-            exit();
+        if (!isset($_SESSION['user'])) {
+           redirect('login');
+        }
+
+        if( $_SESSION['user']['is_user'] === false){
+            redirect('login');
         }
     }
 }

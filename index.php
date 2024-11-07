@@ -7,6 +7,7 @@ require 'Core/functions.php';
 require 'Core/Database.php';
 require 'Core/Router.php';
 
+
 $router = new Router();
 $routes = require 'routes.php';
 

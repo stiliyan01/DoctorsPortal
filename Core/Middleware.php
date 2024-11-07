@@ -10,6 +10,7 @@ class Middleware{
         'user' => UserMiddleware::class,
         'guest' => Guest::class,
         'admin_doctor' => AdminDoctor::class,
+        'putLastUrl' => PutLastUrl::class
     ];
 
     public static function resolve($key)

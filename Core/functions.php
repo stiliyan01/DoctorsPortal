@@ -55,3 +55,7 @@ function requestParams(){
     
     return $result;
 }
+
+function previousUrl(){
+    return $_SERVER['HTTP_REFERER'];
+}
