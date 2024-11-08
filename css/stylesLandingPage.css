@@ -79,9 +79,7 @@
   --bs-highlight-bg: #fff3cd;
 }
 
-.bg-custom-gray-blue{
-  background-color: #2C3E50;
-}
+
 
 *,
 *::before,
@@ -11047,4 +11045,109 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+
+/* 
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-day.disabled {
+  background-color: #f8d7da;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.calendar-day.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.time-slot {
+  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.time-slot:hover {
+  background-color: #e2e6ea;
+}
+
+.time-slot.disabled {
+  background-color: #f8d7da;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.clock-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+} */
+
+
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 months per row */
+  gap: 20px;
+}
+
+.month {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.month-header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days per week */
+  gap: 5px;
+}
+
+.day {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.day:hover {
+  background-color: #e9ecef;
+}
+
+.disabled {
+  background-color: #f0f0f0;
+  color: #ccc;
+  pointer-events: none;
 }
