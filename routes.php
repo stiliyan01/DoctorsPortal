@@ -36,3 +36,8 @@ $router->get('/', 'Controllers/homepage.php');
 $router->get('/doctors', 'Controllers/doctor-results.php');
 $router->get('/save-time', 'Controllers/save-time.php');
 $router->post('/save-time-to-db', 'Controllers/save-time-to-db.php')->only('user');
+
+
+
+//appointments
+$router->get('/get-appointments', 'Controllers/get-appointments.php')->only('user');
