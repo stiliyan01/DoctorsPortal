@@ -35,7 +35,7 @@ class Router {
         foreach ($this->routes as $route) {
             if ($route['url'] === $url && $route['method'] === strtoupper($method)) {
                 Middleware::resolve($route['middleware']);
-
+              
                 return require $route['controller'];
             }
         }

@@ -19,7 +19,7 @@ $router->put('/update-user-profile', 'Controllers/user/update-user-profile.php')
 
 //login
 $router->get('/login', 'Controllers/login.php')->only('guest');
-$router->post('/login-account', 'Controllers/login.php');
+$router->post('/login-account', 'Controllers/login-account.php')->only('guest');
 
 
 //register

@@ -1,32 +1,9 @@
 <?php
 
-require('Models/User.php');
-require('Models/Doctor.php');
+$referer = $_SERVER['HTTP_REFERER'] ?? '';
+$parsed = parse_url($referer);
+$location = ltrim($parsed['path'] ?? '', '/') . (isset($parsed['query']) ? '?' . $parsed['query'] : '');
+$_SESSION['last_location_before_login'] = $location;  
 
-$userModel= new User();
-$doctorModel = new Doctor();
-
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $doctor = $doctorModel->login($_POST);
-    $user = $userModel->login($_POST);
-
-    $logged = [
-        'is_doctor' => $doctor ? true : false,
-        'is_user' => $user ? true : false,
-        'user' => $doctor ? $doctor : ($user ? $user : null)
-    ];
-
-    if(($doctor || $user) === false ){
-       return view('login');
-    }
-
-    $_SESSION['user'] = $logged;
-    
-    if($doctor){
-        return previousUrl();
-    }else{
-        return previousUrl();   
-    }
-}
 
 view('login');
