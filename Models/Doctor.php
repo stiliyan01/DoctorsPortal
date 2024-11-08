@@ -23,10 +23,14 @@ class Doctor extends Model
         $conditions = [];
         $params = [];
 
-        $sql = "SELECT doctors.*, cities.name AS city, doctors_specialties.name AS specialty
-                FROM doctors
-                JOIN cities ON doctors.city_id = cities.id
-                JOIN doctors_specialties ON doctors.speciality_id = doctors_specialties.id";
+        $sql = "SELECT CONCAT(doctors.first_name, ' ', doctors.last_name) AS full_name, 
+               doctors.*, 
+               cities.name AS city, 
+               doctors_specialties.name AS specialty
+        FROM doctors
+        JOIN cities ON doctors.city_id = cities.id
+        JOIN doctors_specialties ON doctors.speciality_id = doctors_specialties.id";
+
     
         if (!empty($searchCriteria['doctorSpecialty'])) {
             $conditions[] = "doctors.speciality_id = :doctorSpecialty";
@@ -39,9 +43,10 @@ class Doctor extends Model
         }
         
         if (!empty($searchCriteria['doctor_name'])) {
-            $conditions[] = "doctors.name LIKE :doctor_name";
+            $conditions[] = "CONCAT(doctors.first_name, ' ', doctors.last_name) LIKE :doctor_name";
             $params[':doctor_name'] = "%" . $searchCriteria['doctor_name'] . "%";
         }
+        
         
         if (!empty($conditions)) {
             $sql .= " WHERE " . implode(" AND ", $conditions);
@@ -50,18 +55,4 @@ class Doctor extends Model
         $this->query($sql, $params);
         return $this->db->statement->fetchAll();
     }
-    
-
-    
 }
-
-
-
-
-
-
-
-
-
-
-////SELECT doctors.*, cities.name AS city, doctors_specialties.name AS specialty FROM doctors JOIN cities ON doctors.city_id = cities.id JOIN doctors_specialties ON doctors.speciality_id = doctors_specialties.id;
