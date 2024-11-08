@@ -22,5 +22,9 @@ if (($doctor || $user) === false) {
 
 $_SESSION['user'] = $logged;
 
-return redirect($_SESSION['last_location_before_login']);
+if($doctor){
+    return redirect('admin');
+}else{
+    return redirect($_SESSION['last_location_before_login']); 
+}
     
