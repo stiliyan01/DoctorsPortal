@@ -18,27 +18,25 @@ $router->get('/user-profile', 'Controllers/user/user-profile.php')->only('user')
 $router->put('/update-user-profile', 'Controllers/user/update-user-profile.php')->only('user');
 
 //login
-$router->get('/login', 'Controllers/login.php')->only('guest');
-$router->post('/login-account', 'Controllers/login-account.php')->only('guest');
+$router->get('/login', 'Controllers/authentication/login.php')->only('guest');
+$router->post('/login-account', 'Controllers/authentication/login-account.php')->only('guest');
 
 
 //register
-$router->get('/register', 'Controllers/register.php')->only('guest');
-$router->post('/register-account', 'Controllers/register.php');
+$router->get('/register', 'Controllers/authentication/register.php')->only('guest');
+$router->post('/register-account', 'Controllers/authentication/register.php')->only('guest');
 
 
 //logout
-$router->delete('/logout', 'Controllers/logout.php');
+$router->delete('/logout', 'Controllers/authentication/logout.php');
 
 
 //user
 $router->get('/', 'Controllers/homepage.php');
 $router->get('/doctors', 'Controllers/doctor-results.php');
-$router->get('/save-time', 'Controllers/save-time.php');
-$router->post('/save-time-to-db', 'Controllers/save-time-to-db.php')->only('user');
-
 
 
 //appointments
-$router->get('/get-appointments', 'Controllers/get-appointments.php');
-$router->post('/save-appointment-to-db', 'Controllers/save-appointment-to-db.php');
+$router->get('/save-time', 'Controllers/appointments/save-time.php');
+$router->get('/get-appointments', 'Controllers/appointments/get-appointments.php');
+$router->post('/save-appointment-to-db', 'Controllers/appointments/save-appointment-to-db.php')->only('authenticated_user');

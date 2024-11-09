@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="Add admin_doctor middleware for admin routes&#10;&#10;Integrated the AdminDoctor middleware to restrict access to admin routes. Updated the Middleware map and route definitions to use the new middleware class. AdminDoctor class checks if the user is a doctor, redirecting to the homepage if not.">
+      <change afterPath="$PROJECT_DIR$/Middleware/AuthenticatedUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/save-time.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/save-time.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/get-appointments.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/appointments/get-appointments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/login-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/authentication/login-account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/authentication/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/authentication/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/authentication/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/save-appointment-to-db.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/appointments/save-appointment-to-db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/save-time.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/appointments/save-time.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Middleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Middleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,30 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/laragon/www/DoctorsProject/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/DoctorsProject/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\DoctorsProject\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DoctorsProject\Controllers\authentication" />
+      <recent name="C:\laragon\www\DoctorsProject\Controllers\appointments" />
       <recent name="C:\laragon\www\DoctorsProject\views\admin\patients" />
       <recent name="C:\laragon\www\DoctorsProject\Controllers\user" />
       <recent name="C:\laragon\www\DoctorsProject\Controllers\admin\patients" />
-      <recent name="C:\laragon\www\DoctorsProject\views\partials\admin" />
-      <recent name="C:\laragon\www\DoctorsProject" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -92,6 +101,7 @@
       <workItem from="1730733496455" duration="7263000" />
       <workItem from="1730902806006" duration="700000" />
       <workItem from="1730971617988" duration="702000" />
+      <workItem from="1731152619364" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor admin structure and update routes&#10;&#10;Removed obsolete files and directories for clarity. Relocated key files to more appropriate locations within admin directory, updated route references accordingly, and improved error handling with a new abort function.">
       <option name="closed" value="true" />
