@@ -40,4 +40,5 @@ $router->post('/save-time-to-db', 'Controllers/save-time-to-db.php')->only('user
 
 
 //appointments
-$router->get('/get-appointments', 'Controllers/get-appointments.php')->only('user');
+$router->get('/get-appointments', 'Controllers/get-appointments.php');
+$router->post('/save-appointment-to-db', 'Controllers/save-appointment-to-db.php');
