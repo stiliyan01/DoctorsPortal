@@ -24,7 +24,6 @@
                 Информация за прегледи
             </div>
             <div id='eventInfo'>
-
             </div>
         </div>
 

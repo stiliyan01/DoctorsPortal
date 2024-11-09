@@ -2,8 +2,8 @@
     <div class="container">
         <a class="navbar-brand" href="/">DOC PORT</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
         </button>
@@ -12,34 +12,39 @@
 
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                        href="<?php echo (current_uri() === strtoupper('/')) ? '#saveATime' : '/#saveATime'; ?>">
+                       href="<?php echo (current_uri() === strtoupper('/')) ? '#saveATime' : '/#saveATime'; ?>">
                         ЗАПАЗИ ЧАС
                     </a>
                 </li>
 
                 <?php if (!isset($_SESSION['user'])) : ?>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href='/login'>Влез</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                        href='/register'>Регистрирай се</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                                         href='/login'>Влез</a>
+                    </li>
+
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                                         href='/register'>Регистрирай се</a></li>
                 <?php endif; ?>
 
 
                 <?php if (isset($_SESSION['user']) && (current_uri() !== '/user-profile')) : ?>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                        href='/user-profile'>Профил</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                                         href='/user-profile'>Профил</a></li>
+
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                                         href='/appointments'>Запазени часове</a></li>
                 <?php endif; ?>
 
                 <?php if (isset($_SESSION['user']) && urlIs('/user-profile')) : ?>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <form action="/logout" method="POST" style="display: inline;">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="nav-link py-3 px-0 px-lg-3 rounded text-danger"
-                            style="border: none; background: none;">
-                            ИЗЛЕЗ
-                        </button>
-                    </form>
-                </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <form action="/logout" method="POST" style="display: inline;">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="nav-link py-3 px-0 px-lg-3 rounded text-danger"
+                                    style="border: none; background: none;">
+                                ИЗЛЕЗ
+                            </button>
+                        </form>
+                    </li>
                 <?php endif; ?>
             </ul>
         </div>

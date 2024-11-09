@@ -34,7 +34,7 @@ $router->delete('/logout', 'Controllers/authentication/logout.php');
 //user
 $router->get('/', 'Controllers/homepage.php');
 $router->get('/doctors', 'Controllers/doctor-results.php');
-
+$router->get('/appointments', 'Controllers/user/appointments.php');
 
 //appointments
 $router->get('/save-time', 'Controllers/appointments/save-time.php');

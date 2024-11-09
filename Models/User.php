@@ -14,9 +14,17 @@ class User extends Model
         return $this->db->statement->fetch();
     }
 
-    public function donors(){
+    public function donors()
+    {
         $sql = "SELECT * FROM {$this->table} WHERE is_donor = 1";
         $this->query($sql);
+        return $this->db->statement->fetchAll();
+    }
+
+    public function appointments($id)
+    {
+        $sql = "SELECT * FROM appointments WHERE user_id = :id";
+        $this->query($sql, ['id' => $id]);
         return $this->db->statement->fetchAll();
     }
 }
