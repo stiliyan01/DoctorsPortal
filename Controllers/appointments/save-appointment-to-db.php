@@ -15,4 +15,4 @@ $dataForDB=[
 
 (new Appointment())->create($dataForDB);
 
-return redirect('user-profile');
+return redirect('appointments');

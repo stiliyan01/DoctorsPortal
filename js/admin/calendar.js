@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <th scope="col">Заглавие</th>
                         <th scope="col">Начало</th>
                         <th scope="col">Край</th>
-                        <th scope="col">Опций</th>
+                        <th scope="col">Опции</th>
                     </tr>
                 </thead>
                 <tbody>
