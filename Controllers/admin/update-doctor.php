@@ -3,8 +3,6 @@
 require 'Models/DoctorSpecialty.php';
 require 'Models/Doctor.php';
 
-
-
 $doctor_id = $_POST['id'];
 
 $doctor = (new Doctor())->find($doctor_id);

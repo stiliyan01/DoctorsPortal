@@ -7,11 +7,10 @@ require('Models/City.php');
 
 $userModel = new User();
 $doctorModel = new Doctor();
-$doctorSpecialtiesModel = new DoctorSpecialty();
-$citiesModel = new City();
 
-$doctoralSpecialties = $doctorSpecialtiesModel->all();
-$cities = $citiesModel->all();
+
+$doctoralSpecialties = (new DoctorSpecialty())->all();
+$cities = (new City())->all();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
@@ -29,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $data['city_id'] = $_POST['city'];
 
 
-        $doctorModel->create($data);
+        (new Doctor())->create($data);
     } else {
-        $userModel->create($data);
+        (new User())->create($data);
     }
     header('Location: /login');
 }

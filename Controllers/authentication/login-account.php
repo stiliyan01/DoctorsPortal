@@ -4,11 +4,9 @@
 require('Models/User.php');
 require('Models/Doctor.php');
 
-$userModel = new User();
-$doctorModel = new Doctor();
 
-$doctor = $doctorModel->login($_POST);
-$user = $userModel->login($_POST);
+$doctor = (new Doctor())->login($_POST);
+$user = (new User())->login($_POST);
 
 $logged = [
     'is_doctor' => $doctor ? true : false,

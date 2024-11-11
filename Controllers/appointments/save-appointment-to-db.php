@@ -3,7 +3,6 @@ require('Models/Appointment.php');
 
 $date = $_POST['date'];
 
-
 $dateObject = DateTime::createFromFormat('D M d Y H:i:s e+', $date);
 $formattedDate = $dateObject->format('Y-m-d H:i:s');
 
