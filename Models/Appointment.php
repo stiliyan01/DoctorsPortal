@@ -7,7 +7,7 @@ class Appointment extends Model
     protected $table = 'appointments';
     protected $primaryKey = 'id';
     public function getByDoctorId($id) {
-        $sql = "SELECT $this->table.*, users.first_name AS user_first_name, users.last_name AS user_last_name
+        $sql = "SELECT $this->table.*, users.id as user_id, users.first_name AS user_first_name, users.last_name AS user_last_name
             FROM $this->table
             JOIN `users` ON $this->table.`user_id` = `users`.`id`
             WHERE $this->table.`doctor_id` = :doctor_id";

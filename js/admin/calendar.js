@@ -6,17 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return {
       id: appointment.id,
-      title:  `${appointment.user_first_name}  ${ appointment.user_last_name}`,
+      title: `${appointment.user_first_name}  ${appointment.user_last_name}`,
       start: appointment.time,
       end: endTime.toISOString().replace("T", " ").substring(0, 19),
       user: {
-        'first_name' : appointment.user_first_name,
-        'last_name' : appointment.user_last_name,
+        id: appointment.user_id,
+        first_name: appointment.user_first_name,
+        last_name: appointment.user_last_name,
       },
     };
   });
+
+  events.sort((a, b) => {
+    return new Date(a.start) - new Date(b.start);
+  });
+
   const calendarEl = document.getElementById("calendar");
-console.log(events, appointments);
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "dayGridMonth",
     height: 550,
@@ -51,6 +56,7 @@ console.log(events, appointments);
                         <th scope="col">Заглавие</th>
                         <th scope="col">Начало</th>
                         <th scope="col">Край</th>
+                        <th scope="col">Опций</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,9 +66,15 @@ console.log(events, appointments);
         html += `
                 <tr>
                     <th scope="row">${index + 1}</th>
-                    <td>Час с пациент: ${event.user.first_name} ${event.user.last_name}</td>
+                    <td>Час с пациент: ${event.user.first_name} ${
+          event.user.last_name
+        }</td>
                     <td>${event.start}</td>
                     <td>${event.end}</td>
+                    <td>
+                        <a href="/admin/patient-details?id=${event.user.id}"
+                                                            class='btn bg-primary details'>Детайли</a>
+                    </td>
                 </tr>
             `;
       });
