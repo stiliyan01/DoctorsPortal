@@ -30,6 +30,8 @@
                 </div>
                 <input type="hidden" name="date" id="time_hidden">
                 <input type="hidden" name="doctor_id" id="doctor_id" value="<?= requestParams()['doctor_id'] ?>">
+                <input type="hidden" name="description" id="description"
+                    value="<?= "Час с пациент: {$user['first_name']} {$user['last_name']}" ?>">
                 <button type="submit" id='submit-button'
                     class="btn mt-3 text-white bg-custom-gray-blue invisible">ЗАПАЗИ
                     ЧАС!</button>
