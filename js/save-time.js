@@ -1,114 +1,15 @@
-// $(document).ready(function () {
-//   let appointments;
-//   $.get("/get-appointments", function (data) {
-//     appointments = data;
-//     console.log(data);
-
-//     let occupiedTimes = {};
-//     appointments.forEach((app) => {
-//       let date = app.time.split(" ")[0];
-//       let time = app.time.split(" ")[1].substring(0, 5);
-//       if (!occupiedTimes[date]) {
-//         occupiedTimes[date] = [];
-//       }
-//       occupiedTimes[date].push(time);
-//     });
-
-//     let today = new Date();
-//     let currentMonth = today.getMonth() + 1;
-//     let currentYear = today.getFullYear();
-
-//     function generateCalendar(year, month) {
-//       $("#calendar").empty();
-//       let monthName = new Date(year, month - 1).toLocaleString("default", {
-//         month: "long",
-//       });
-//       $("#current-month").text(`${monthName.toUpperCase()} ${year}`);
-//       $("#current-month").addClass("text-white bold");
-//       let daysInMonth = new Date(year, month, 0).getDate();
-//       let monthDiv = $('<div class="month rounded bg-custom-gray-blue"></div>');
-//       let daysGrid = $('<div class="days-grid rounded"></div>');
-
-//       for (let d = 1; d <= daysInMonth; d++) {
-//         let date = `${year}-${String(month).padStart(2, "0")}-${String(
-//           d
-//         ).padStart(2, "0")}`;
-//         let dayElem = $(
-//           '<div class="day btn btn-light bg-primary text-white border-primary"></div>'
-//         ).text(d);
-
-//         if (occupiedTimes[date]) {
-//           dayElem.addClass("disabled");
-//         }
-
-//         dayElem.click(function () {
-//           let selectedDate = date;
-
-//           generateTimeSlots(selectedDate);
-//         });
-
-//         daysGrid.append(dayElem);
-//       }
-
-//       monthDiv.append(daysGrid);
-//       $("#calendar").append(monthDiv);
-//     }
-
-//     function generateTimeSlots(date) {
-//       $("#time-slots").empty();
-//       for (let hour = 9; hour <= 16; hour++) {
-//         let time = `${String(hour).padStart(2, "0")}:00`;
-//         let timeElem = $(
-//           '<div class="time-slot btn btn-light bg-custom-gray-blue text-white border-0 "></div>'
-//         ).text(time);
-//         if (occupiedTimes[date] && occupiedTimes[date].includes(time)) {
-//           timeElem.addClass("disabled").prop("disabled", true);
-//         }
-//         $("#time-slots").append(timeElem);
-//         timeElem.on("click", function () {
-//           alert("Selected time: " + date + " " + time);
-//         });
-//       }
-//     }
-
-//     function updateCalendar() {
-//       generateCalendar(currentYear, currentMonth);
-//     }
-
-//     $("#prev-month").click(function () {
-//       if (currentMonth === 1) {
-//         currentMonth = 12;
-//         currentYear--;
-//       } else {
-//         currentMonth--;
-//       }
-//       updateCalendar();
-//     });
-
-//     $("#next-month").click(function () {
-//       if (currentMonth === 12) {
-//         currentMonth = 1;
-//         currentYear++;
-//       } else {
-//         currentMonth++;
-//       }
-//       updateCalendar();
-//     });
-
-//     updateCalendar();
-//   });
-// });
-
 $(document).ready(function () {
   let appointments;
+  let selectedDate = null;
+  let selectedTime = null;
+
   $.get("/get-appointments", function (data) {
     appointments = data;
     let occupiedTimes = {};
 
-    // Populate `occupiedTimes` to track which dates and times are occupied
     appointments.forEach((app) => {
       let date = app.time.split(" ")[0];
-      let time = app.time.split(" ")[1].substring(0, 5); // Extract hour and minute
+      let time = app.time.split(" ")[1].substring(0, 5);
       if (!occupiedTimes[date]) {
         occupiedTimes[date] = [];
       }
@@ -118,6 +19,11 @@ $(document).ready(function () {
     let today = new Date();
     let currentMonth = today.getMonth() + 1;
     let currentYear = today.getFullYear();
+    let currentDay = today.getDate();
+    let currentDateString = `${currentYear}-${String(currentMonth).padStart(
+      2,
+      "0"
+    )}-${String(currentDay).padStart(2, "0")}`;
 
     function generateCalendar(year, month) {
       $("#calendar").empty();
@@ -126,32 +32,75 @@ $(document).ready(function () {
       });
       $("#current-month").text(`${monthName.toUpperCase()} ${year}`);
       $("#current-month").addClass("text-white bold");
-      let daysInMonth = new Date(year, month, 0).getDate();
-      let monthDiv = $('<div class="month rounded bg-custom-gray-blue"></div>');
-      let daysGrid = $('<div class="days-grid rounded"></div>');
 
-      for (let d = 1; d <= daysInMonth; d++) {
+      const daysOfWeek = [
+        "Неделя",
+        "Понеделник",
+        "Вторник",
+        "Сряда",
+        "Четвъртък",
+        "Петък",
+        "Събота",
+      ];
+      let daysHeader = $('<div class="days-grid-header"></div>');
+      daysOfWeek.forEach((day) => {
+        let dayElem = $(
+          '<div class="day-header rounded bg-custom-gray-blue text-white"></div>'
+        ).text(day);
+        daysHeader.append(dayElem);
+      });
+      $("#calendar").append(daysHeader);
+
+      let daysInMonth = new Date(year, month, 0).getDate();
+      let firstDay = new Date(year, month - 1, 1).getDay();
+
+      let daysGrid = $('<div class="days-grid"></div>');
+
+      for (let i = 0; i < firstDay; i++) {
+        daysGrid.append($('<div class="day empty"></div>'));
+      }
+
+      for (let day = 1; day <= daysInMonth; day++) {
         let date = `${year}-${String(month).padStart(2, "0")}-${String(
-          d
+          day
         ).padStart(2, "0")}`;
         let dayElem = $(
-          '<div class="day btn btn-light bg-primary text-white border-primary"></div>'
-        ).text(d);
+          '<div class="day btn btn-light bg-custom-gray-blue text-white border-0"></div>'
+        ).text(day);
 
-        dayElem.click(function () {
-          generateTimeSlots(date);
-        });
+        let dayOfWeek = new Date(year, month - 1, day).getDay();
+        if (dayOfWeek === 0 || dayOfWeek === 6) {
+          dayElem.addClass("disabled").prop("disabled", true);
+        } else {
+          dayElem.click(function () {
+            selectDay(date, dayElem);
+          });
+        }
+
+        if (date === currentDateString) {
+          dayElem.addClass("today");
+        }
 
         daysGrid.append(dayElem);
       }
 
-      monthDiv.append(daysGrid);
-      $("#calendar").append(monthDiv);
+      $("#calendar").append(daysGrid);
+    }
+
+    function selectDay(date, dayElem) {
+      if (selectedDate) {
+        $(`.day[data-date="${selectedDate}"]`).removeClass("selected-element");
+      }
+      selectedDate = date;
+      dayElem.addClass("selected-element");
+      dayElem.attr("data-date", date);
+
+      generateTimeSlots(date);
     }
 
     function generateTimeSlots(date) {
+      $("#time-slots").addClass("d-flex justify-content-between flex-wrap");
       $("#time-slots").empty();
-
       const startHour = 9;
       const endHour = 16;
 
@@ -165,17 +114,26 @@ $(document).ready(function () {
           timeElem.addClass("disabled").prop("disabled", true);
         }
 
-        $("#time-slots").append(timeElem);
-
         timeElem.on("click", function () {
           if (!$(this).hasClass("disabled")) {
-            $("#submit-button").removeClass("invisible");
+            if (selectedTime) {
+              $(`.time-slot[data-time="${selectedTime}"]`).removeClass(
+                "selected-element"
+              );
+            }
+
+            selectedTime = time;
+            $(this).addClass("selected-element");
+            $(this).attr("data-time", time);
 
             let selectedDateTime = new Date(`${date}T${time}:00`);
-
             $("#time_hidden").val(selectedDateTime);
+
+            $("#submit-button").removeClass("invisible");
           }
         });
+
+        $("#time-slots").append(timeElem);
       }
     }
 
