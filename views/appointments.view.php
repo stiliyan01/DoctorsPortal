@@ -4,28 +4,26 @@ view('partials/head');
 
 <body id="page-top">
 
-<?php
+    <?php
 view('partials/nav');
 ?>
-<!-- Page Content-->
+    <!-- Page Content-->
 
-<section class="pt-10 mt-10 page-section masthead bg-primary">
-    <div class="container px-lg-5">
+    <section class="pt-10 mt-10 page-section masthead bg-primary">
+        <div class="container px-lg-5">
 
-        <div class="card mb-4">
-            <div class="card-header">
+            <div class="card mb-4">
+                <div class="card-header">
+                </div>
+                <div id='calendar'></div>
             </div>
-            <div id='calendar'></div>
+
         </div>
+    </section>
 
-    </div>
-</section>
+    <script src='../js/appointments.js'></script>
 
-<script src='../js/appointments.js'>
-
-<?php
-view('partials/footer');
+    <?php
+view(name: 'partials/footer');
 ?>
 </body>
-
-</html>
