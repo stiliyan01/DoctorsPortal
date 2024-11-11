@@ -5,12 +5,12 @@ view('partials/head');
 <body id="page-top">
 
     <?php
-view('partials/nav');
-?>
-    <!-- Page Content-->
-
-    <section class="pt-10 mt-10 page-section masthead bg-primary">
-        <div class="container px-lg-5">
+        view('partials/nav');
+    ?>
+    <main class="masthead">
+        <div class="container-fluid px-4">
+            <div class="row">
+            </div>
 
             <div class="card mb-4">
                 <div class="card-header">
@@ -18,12 +18,24 @@ view('partials/nav');
                 <div id='calendar'></div>
             </div>
 
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    Информация за прегледи
+                </div>
+                <div id='eventInfo'>
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
+
+    <script>
+        var appointments = <?php echo json_encode($appointments); ?>
+    </script>
 
     <script src='../js/appointments.js'></script>
 
     <?php
-view(name: 'partials/footer');
-?>
+        view(name: 'partials/footer');
+    ?>
 </body>

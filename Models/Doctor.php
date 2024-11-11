@@ -55,10 +55,4 @@ class Doctor extends Model
         $this->query($sql, $params);
         return $this->db->statement->fetchAll();
     }
-
-    function appointments($doctor_id){
-        $sql = "SELECT * FROM appointments WHERE doctor_id = :doctor_id";
-        $this->query($sql, ['doctor_id' => $doctor_id]);
-        return $this->db->statement->fetchAll();
-    }
 }

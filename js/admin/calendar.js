@@ -5,13 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     endTime.setHours(startTime.getHours() + 3);
 
     return {
-      title: appointment.description,
+      id: appointment.id,
+      title:  `${appointment.user_first_name}  ${ appointment.user_last_name}`,
       start: appointment.time,
-      end: endTime.toISOString().replace("T", " ").substring(0, 19), // Formatting to match input time format
+      end: endTime.toISOString().replace("T", " ").substring(0, 19),
+      user: {
+        'first_name' : appointment.user_first_name,
+        'last_name' : appointment.user_last_name,
+      },
     };
   });
   const calendarEl = document.getElementById("calendar");
-
+console.log(events, appointments);
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "dayGridMonth",
     height: 550,
@@ -55,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         html += `
                 <tr>
                     <th scope="row">${index + 1}</th>
-                    <td>${event.title}</td>
+                    <td>Час с пациент: ${event.user.first_name} ${event.user.last_name}</td>
                     <td>${event.start}</td>
                     <td>${event.end}</td>
                 </tr>

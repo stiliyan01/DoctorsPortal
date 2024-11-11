@@ -22,17 +22,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="/css/stylesLandingPage.css" rel="stylesheet" />
 
-
-<!-- DATETIMEPICKER CSS -->
-<!-- <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" />
- -->
-
-
-
-<!-- DATEIMEPCIKER JS  -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"> -->
-<!-- </script> -->
-
+<!-- Full Calendar -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
 
 </head>

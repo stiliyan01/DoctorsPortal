@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1bd17c3-a15d-458e-bb1b-4a014ce28efb" name="Changes" comment="Add AuthenticatedUser middleware and reorganize files&#10;&#10;Implemented new AuthenticatedUser middleware to handle session-based authentication checks. Reorganized controller files into authentication and appointments directories for better structure and maintainability. Updated routes and Middleware map to reflect these changes, ensuring proper access control and routing.">
-      <change afterPath="$PROJECT_DIR$/Controllers/user/appointments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/appointments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/appointments.view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/appointments/delete-appointment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/admin/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/admin/calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/user/appointments.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/user/appointments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/appointments.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/appointments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin/calendar.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/calendar.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/nav.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/nav.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/appointments.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/appointments.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/head.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +102,7 @@
       <workItem from="1730902806006" duration="700000" />
       <workItem from="1730971617988" duration="702000" />
       <workItem from="1731152619364" duration="2930000" />
+      <workItem from="1731328824647" duration="3275000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor admin structure and update routes&#10;&#10;Removed obsolete files and directories for clarity. Relocated key files to more appropriate locations within admin directory, updated route references accordingly, and improved error handling with a new abort function.">
       <option name="closed" value="true" />

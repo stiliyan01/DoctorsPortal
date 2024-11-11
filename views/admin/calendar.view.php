@@ -30,7 +30,7 @@
 
     </div>
 </main>
-//prettier-ignore
+
 <script>
 var appointments = <?php echo json_encode($appointments); ?>;
 </script>

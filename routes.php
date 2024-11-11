@@ -40,3 +40,4 @@ $router->get('/appointments', 'Controllers/user/appointments.php');
 $router->get('/save-time', 'Controllers/appointments/save-time.php');
 $router->get('/get-appointments', 'Controllers/appointments/get-appointments.php');
 $router->post('/save-appointment-to-db', 'Controllers/appointments/save-appointment-to-db.php')->only('authenticated_user');
+$router->delete('/delete-appointment', 'Controllers/appointments/delete-appointment.php')->only('authenticated_user');
