@@ -26,12 +26,12 @@
                 <?php endif; ?>
 
 
-                <?php if (isset($_SESSION['user']) && (current_uri() !== '/user-profile')) : ?>
+                <?php if (($_SESSION['user']['is_user']===true) && (current_uri() !== '/user-profile')) : ?>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                         href='/user-profile'>Профил</a></li>
                 <?php endif; ?>
 
-                <?php if (isset($_SESSION['user'])) : ?>
+                <?php if ($_SESSION['user']['is_user']===true) : ?>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                         href='/appointments'>Запазени часове</a></li>
                 <?php endif; ?>
