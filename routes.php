@@ -8,8 +8,6 @@ $router->get('/admin/patient-details', 'Controllers/admin/patients/patient-detai
 $router->get('/admin/donors', 'Controllers/admin/donors.php')->only('admin_doctor');
 
 $router->put('/admin/update-patient-details', 'Controllers/admin/patients/update-patient-details.php')->only('admin_doctor');
-
-
 $router->put('/admin/update-doctor', 'Controllers/admin/update-doctor.php')->only('admin_doctor');
 
 
