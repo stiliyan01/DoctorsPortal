@@ -3,7 +3,11 @@
    view('partials/admin/nav');
    view('partials/admin/dashboardPanel');
 ?>
-
+<?php
+        if(isset($errors)){
+            view('partials/flashMessage', ['errors' => $errors]);
+        }
+?>
 <main>
     <div class="container-fluid px-4">
         <div class=''>

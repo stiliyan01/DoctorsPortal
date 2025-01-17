@@ -18,6 +18,23 @@ $dataForUpdate = [
     'city_id' => $_POST['city_id'],
 ];
 
+$v = new Validator($dataForUpdate);
+
+$v->field('title')->required()->min_len(3)->max_len(50);
+$v->field('first_name')->required()->min_len(3)->max_len(50);
+$v->field('last_name')->required()->min_len(3)->max_len(50);
+$v->field('email')->required()->email();
+$v->field('password')->required()->min_len(6)->max_len(50);
+$v->field('gender')->required();
+$v->field('speciality_id')->required();
+$v->field('city_id')->required();
+
+if(!$v->is_valid()){
+    return view('admin/homepage', [
+    'errors' => 'Please fill all the fields correctly',
+    'doctor'=>$doctor]);
+}
+
 (new Doctor())->update($doctor_id, $dataForUpdate);
 
 redirect('admin');
