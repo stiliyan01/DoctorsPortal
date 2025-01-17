@@ -4,7 +4,11 @@
     <?php
 view('partials/nav');
 ?>
-
+    <?php
+        if(isset($errors)){
+            view('partials/flashMessage', ['errors' => $errors]);
+        }
+    ?>
     <section class="page-section portfolio masthead bg-primary" id="">
         <div class="container">
             <!-- Portfolio Section Heading-->
