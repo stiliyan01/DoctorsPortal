@@ -4,6 +4,7 @@ session_start();
 $config = require 'config.php';
   
 require 'Core/functions.php';
+require 'Core/Validator.php';
 require 'Core/Database.php';
 require 'Core/Router.php';
 
