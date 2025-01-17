@@ -23,7 +23,7 @@ $v->field('gender')->required();
 if(!$v->is_valid()){
     return view('user-profile', [
        
-    'errors' => 'Please fill all the fields correctly',
+    'errors' => 'Моля попълнете всички полета правилно',
     'user'=>$user]);
 }
 
